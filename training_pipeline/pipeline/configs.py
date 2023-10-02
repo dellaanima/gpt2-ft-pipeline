@@ -14,9 +14,9 @@ try:
     try:
         _, GOOGLE_CLOUD_PROJECT = google.auth.default()
     except google.auth.exceptions.DefaultCredentialsError:
-        GOOGLE_CLOUD_PROJECT = "gcp-ml-172005"
+        GOOGLE_CLOUD_PROJECT = "inspiring-cat-4005085"
 except ImportError:
-    GOOGLE_CLOUD_PROJECT = "gcp-ml-172005"
+    GOOGLE_CLOUD_PROJECT = "inspiring-cat-4005085"
 
 GOOGLE_CLOUD_REGION = "us-central1"
 
@@ -26,7 +26,7 @@ PIPELINE_IMAGE = f"gcr.io/{GOOGLE_CLOUD_PROJECT}/{PIPELINE_NAME}"
 OUTPUT_DIR = os.path.join("gs://", GCS_BUCKET_NAME)
 PIPELINE_ROOT = os.path.join(OUTPUT_DIR, "tfx_pipeline_output", PIPELINE_NAME)
 
-DATA_PATH = "gs://alpaca-tfrecords/"
+DATA_PATH = "gs://alpaca-tfrecord/"
 
 TRAINING_FN = "modules.train.run_fn"
 TUNER_FN = "modules.tuning.tuner_fn"
@@ -74,7 +74,7 @@ GCP_AI_PLATFORM_SERVING_ARGS = {
 
 GRADIO_APP_PATH = "huggingface.apps.gradio"
 HF_PUSHER_ARGS = {
-    "username": "chansung",
+    "username": "dellaanima",
     "access_token": "$HF_ACCESS_TOKEN",
     "repo_name": PIPELINE_NAME,
     "space_config": {

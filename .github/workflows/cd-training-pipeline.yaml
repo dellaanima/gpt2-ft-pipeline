@@ -6,7 +6,7 @@ on:
       gcpProject:
         description: 'GCP Project for Vertex AI Pipeline'
         required: true
-        default: 'gcp-ml-172005'
+        default: 'inspiring-cat-4005085'
       gcpRegion:
         description: 'GCP Region for Vertex AI Pipeline'
         required: true
@@ -44,7 +44,7 @@ jobs:
     - name: 'Replace GCP Project in config.py'
       working-directory: 'training_pipeline'
       run: |
-        sed -i 's/gcp-ml-172005/${{ github.event.inputs.gcpProject }}/g' pipeline/configs.py
+        sed -i 's/inspiring-cat-400508/${{ github.event.inputs.gcpProject }}/g' pipeline/configs.py
     
     - name: 'Authenticate to Google Cloud'
       uses: 'google-github-actions/auth@v0'

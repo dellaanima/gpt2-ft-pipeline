@@ -78,6 +78,11 @@ jobs:
         mv pipeline/configs_tmp.py pipeline/configs.py
         cat pipeline/configs.py
 
+    - name: Setup artifact registry
+      run: |
+          gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin https://us-docker.pkg.dev
+
+        
     - name: 'Create TFX Training Pipeline'
       working-directory: 'training_pipeline'
       run: |

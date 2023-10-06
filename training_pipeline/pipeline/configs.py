@@ -21,7 +21,7 @@ except ImportError:
 GOOGLE_CLOUD_REGION = "us"
 
 GCS_BUCKET_NAME = f"{GOOGLE_CLOUD_PROJECT}-{PIPELINE_NAME}"
-PIPELINE_IMAGE = f"us-docker.pkg.dev/{GOOGLE_CLOUD_PROJECT}/{PIPELINE_NAME}/image1"
+PIPELINE_IMAGE = "us-docker.pkg.dev/inspiring-cat-400508/kerasnlp-gpt2-alpaca-pipeline/image1:latest"
 OUTPUT_DIR = os.path.join("gs://", GCS_BUCKET_NAME)
 PIPELINE_ROOT = os.path.join(OUTPUT_DIR, "tfx_pipeline_output", PIPELINE_NAME)
 

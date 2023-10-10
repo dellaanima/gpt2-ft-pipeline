@@ -14,9 +14,9 @@ try:
     try:
         _, GOOGLE_CLOUD_PROJECT = google.auth.default()
     except google.auth.exceptions.DefaultCredentialsError:
-        GOOGLE_CLOUD_PROJECT = "inspiring-cat-4005085"
+        GOOGLE_CLOUD_PROJECT = "inspiring-cat-400508"
 except ImportError:
-    GOOGLE_CLOUD_PROJECT = "inspiring-cat-4005085"
+    GOOGLE_CLOUD_PROJECT = "inspiring-cat-400508"
 
 GOOGLE_CLOUD_REGION = "us"
 

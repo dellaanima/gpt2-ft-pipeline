@@ -18,14 +18,14 @@ try:
 except ImportError:
     GOOGLE_CLOUD_PROJECT = "inspiring-cat-400508"
 
-GOOGLE_CLOUD_REGION = "us"
+GOOGLE_CLOUD_REGION = "us-central1"
 
 GCS_BUCKET_NAME = f"{GOOGLE_CLOUD_PROJECT}-{PIPELINE_NAME}"
 PIPELINE_IMAGE = "us-docker.pkg.dev/inspiring-cat-400508/kerasnlp-gpt2-alpaca-pipeline/image1:latest"
 OUTPUT_DIR = os.path.join("gs://", GCS_BUCKET_NAME)
 PIPELINE_ROOT = os.path.join(OUTPUT_DIR, "tfx_pipeline_output", PIPELINE_NAME)
 
-DATA_PATH = "gs://alpaca-tfrecord/"
+DATA_PATH = "gs://alpaca-tf/"
 
 TRAINING_FN = "modules.train.run_fn"
 TUNER_FN = "modules.tuning.tuner_fn"

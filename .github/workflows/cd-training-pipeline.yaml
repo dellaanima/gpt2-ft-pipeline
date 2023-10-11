@@ -36,11 +36,11 @@ jobs:
         #pip install -r training_pipeline/requirements.txt
         # Use the latest version of pip.
         pip install --upgrade pip
-        #pip install --upgrade "tfx[kfp]<2"
-        #pip install pytest
-        #pip install huggingface-hub
-        #pip install keras_nlp
-        #pip install regex
+        pip install --upgrade "tfx[kfp]<2"
+        pip install pytest
+        pip install huggingface-hub
+        pip install keras_nlp
+        pip install regex
         pip install -U google-cloud-aiplatform "shapely<2" 
 
     

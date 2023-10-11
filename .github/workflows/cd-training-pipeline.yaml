@@ -42,6 +42,8 @@ jobs:
         pip install huggingface-hub
         pip install keras_nlp
         pip install regex
+        pip install -U google-cloud-aiplatform "shapely<2" 
+
     
     - name: 'Replace GCP Project Strings'
       id: prepare-step
@@ -68,9 +70,7 @@ jobs:
       run: |
         gcloud --quiet auth configure-docker
 
-    - name: 'Setup artifact registry'
-      run: |
-          gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin https://us-docker.pkg.dev
+
 
     - name: 'Replace Access Token Placeholder'
       working-directory: 'training_pipeline'

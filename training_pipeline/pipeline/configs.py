@@ -28,9 +28,9 @@ PIPELINE_ROOT = os.path.join(OUTPUT_DIR, "tfx_pipeline_output", PIPELINE_NAME)
 DATA_PATH = "gs://alpaca-tf/"
 
 TRAINING_FN = "modules.train.run_fn"
-TUNER_FN = "modules.tuning.tuner_fn"
 PREPROCESSING_FN = "modules.preprocessing.preprocessing_fn"
-
+#TUNER_FN = "modules.tuning.tuner_fn" -> Not Used. 
+ 
 EXAMPLE_GEN_BEAM_ARGS = None
 TRANSFORM_BEAM_ARGS = None
 
